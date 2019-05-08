@@ -1,5 +1,7 @@
 # Adversarial Filter generator
+
 Training filter: python3 -u filter_trainer.py --arch=resnet{x} --resume=pretrained_models/resnet{x}.th --filter-weight={chosen weight}
+
 Testing filter: python3 -u filter_tester.py --arch=resnet{x} --resume=pretrained_models/resnet{x}.th --filter-weight={filter chosen weight} --filter-state=filter_state.th
 
 # Proper ResNet Implementation for CIFAR10/CIFAR100 in pytorch
