@@ -1,3 +1,7 @@
+# Adversarial Filter generator
+Training filter: python3 -u filter_trainer.py --arch=resnet{x} --resume=pretrained_models/resnet{x}.th --filter-weight={chosen weight}
+Testing filter: python3 -u filter_tester.py --arch=resnet{x} --resume=pretrained_models/resnet{x}.th --filter-weight={filter chosen weight} --filter-state=filter_state.th
+
 # Proper ResNet Implementation for CIFAR10/CIFAR100 in pytorch
 [Torchvision model zoo](https://github.com/pytorch/vision/tree/master/torchvision/models) provides number of implementations of various state-of-the-art architectures, however, most of them are defined and implemented for ImageNet.
 Usually it is very straightforward to use them on other datasets, but sometimes these models need manual setup.
